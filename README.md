@@ -1,4 +1,4 @@
-# ovl/contour-auto-inlcude
+# ovl/contour-auto-include
 
 Manages the `includes:` list in Contour `HTTPProxy` objects that
 defines a "vhost". This allows applications that handles paths in the
@@ -11,7 +11,7 @@ outlined in;
 
 ## Labels
 
-`contour-auto-inlcude` will only handle `HTTPProxy` objects with
+`contour-auto-include` will only handle `HTTPProxy` objects with
 defined labels;
 
 ```

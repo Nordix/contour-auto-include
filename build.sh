@@ -1,7 +1,7 @@
 #! /bin/sh
 ##
 ## build.sh --
-##   Build contour-auto-inlcude.
+##   Build contour-auto-include.
 ##
 ## Commands;
 ##
@@ -34,7 +34,7 @@ dbg() {
 ##    Print environment.
 ##
 cmd_env() {
-	test -n "$__image" || __image=registry.nordix.org/cloud-native/contour-auto-inlcude
+	test -n "$__image" || __image=registry.nordix.org/cloud-native/contour-auto-include
 	test -n "$__version" || __version=latest
 	test "$cmd" = "env" && set | grep -E '^(__.*)='
 }

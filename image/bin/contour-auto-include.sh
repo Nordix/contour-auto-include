@@ -1,6 +1,6 @@
 #! /bin/sh
 ##
-## contour-auto-inlcude.sh --
+## contour-auto-include.sh --
 ##
 ##
 ## Commands;
