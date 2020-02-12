@@ -50,7 +50,7 @@ spec:
 The `example.com/vhost: "yes"` makes contour-auto-include recognise
 this as a "top" object to handle. The `example.com/parent: kahttp-vhost`
 in the sub-object makes contour-auto-include add this in the include: array
-of the top object.
+of the top object. The prefix "example.com/" can be altered in the manifest.
 
 HTTPProxy objects without these labels are ignored by contour-auto-include.
 

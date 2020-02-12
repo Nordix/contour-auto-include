@@ -34,9 +34,9 @@ dbg() {
 ##    Print environment.
 ##
 cmd_env() {
-	test "$cmd" = "env" && set | grep -E '^(__.*|ARCHIVE)='
 	test -n "$__namespace" || __namespace=default
 	test -n "$__prefix" || __prefix=example.com/
+	test "$cmd" = "env" && set | grep -E '^(__.*|ARCHIVE)='
 }
 
 ##  get_path_objects [--namespace=default] <parent>

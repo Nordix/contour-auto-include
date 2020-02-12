@@ -15,4 +15,8 @@ spec:
       containers:
       - name: contour-auto-include
         image: registry.nordix.org/cloud-native/contour-auto-include:latest
-
+        env:
+          - name: __prefix
+            value: "example.com/"
+          - name: __interval
+            value: "10"
