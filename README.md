@@ -1,4 +1,4 @@
-# ovl/contour-auto-include
+# contour-auto-include
 
 Manages the `includes:` list in Contour `HTTPProxy` objects that
 defines a "vhost". This allows applications that handles paths in the
@@ -7,7 +7,10 @@ outlined in;
 
 * https://github.com/projectcontour/contour/issues/2206
 
-
+Install with;
+```
+kubectl apply -f https://github.com/Nordix/contour-auto-include/raw/master/contour-auto-include.yaml
+```
 
 ## Labels
 
@@ -50,4 +53,34 @@ in the sub-object makes contour-auto-include add this in the include: array
 of the top object.
 
 HTTPProxy objects without these labels are ignored by contour-auto-include.
+
+
+## Implementation
+
+The [contour-auto-include.sh](image/bin/contour-auto-include.sh)
+script can be executed outside a POD to update the `includes:` arrays.
+
+```
+$ ./image/bin/contour-auto-include.sh
+
+ contour-auto-include.sh --
+
+
+ Commands;
+
+  env
+    Print environment.
+
+  get_path_objects [--namespace=default] <parent>
+    Get path objects for a parent.
+  get_top_objects
+    Get top objects from all namespaces in form "namespace/name".
+  emit_include_list [--namespace=default] <top-object>
+    Emit an "includes:" array for a given top-object
+
+  update [--interval=<secons>]
+    Update the "includes:" array in all vhost objects.
+    If --interval is specified this command will not return but update
+    continuously with the given interval.
+```
 
